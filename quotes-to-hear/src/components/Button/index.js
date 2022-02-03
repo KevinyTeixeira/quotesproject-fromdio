@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
- const Button = (props) => {
+export  const Button = (props) => {
 
 	const { children, onClick } = props;
 
@@ -14,7 +13,8 @@ import PropTypes from 'prop-types'
 }
 
 // Style CSS
-const StyledButton = styled.btn`
+const StyledButton = styled.button`
+	margin-bottom: 1rem;
 	border-radius: 25px;
 `
 
@@ -22,5 +22,3 @@ const StyledButton = styled.btn`
 //Button.propTypes = {
 //	onClick: PropTypes.func.isRequired
 //}
-
-export default Button;

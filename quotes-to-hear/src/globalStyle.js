@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import bgImg from './components/Image/'
 
-const globalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
+	body {
+	overflow: hidden; /* Hide scrollbars */
+	background: url(${props => props.src}) center no-repeat;
 	background-size: cover;
-	background: ${bgImg} center no-repeat;
-`
-
-export default globalStyle;
+	font-family: fantasy;
+	}
+`;

@@ -1,29 +1,31 @@
 import React from 'react';
-import styled from './globalStyle';
+import styled from 'styled-components';
 import { Button, Quote, Image } from './components';
+import { GlobalStyle } from './globalStyle';
 
-function App() {
+export function App() {
 
-		const generateNewQuote = () => {
+	const generateNewQuote = () => {
 		console.log("Generating...")
 	}
 
+	const speak = "Suba o primeiro degrau com fé. Não é necessário que você veja toda a escada. Apenas dê o primeiro passo."
+	const speaker = "Martin Luther King";
+
 	return (
 		<>
-			<ContentStyled>
-				<Quote>Suba o primeiro degrau com fé. Não é necessário que você veja toda a escada. Apenas dê o primeiro passo. - Speaker</Quote>
-				<Button onClick = { generateNewQuote }>New Quote</Button>
-				<Image />
-			</ContentStyled>
+			<GlobalStyle src = { Image } />
+					<Content>
+						<Button onClick = { generateNewQuote }>New Quote</Button>
+						<Quote speak = { speak }  speaker = { speaker }/>
+					</Content>
 		</>
 	);
 }
 
-// Style CSS
-const ContentStyled = styled.div`
-	height: 100vh;
-	padding: 0 50px;
-	justify-content: center;
-	align-items: center;
-`
-export default App;
+const Content = styled.div`
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10% 50px;
+  text-align: center;
+`;
