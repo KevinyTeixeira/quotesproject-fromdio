@@ -12,7 +12,7 @@ export const Quote = ({ speak, speaker}) => {
 
 // Style CSS
 const SpeakStyled = styled.p`
-	font-size: 2rem;
+	font-size: 8vw;
 	color: white;
 	margin: 0;
 	background-color: rgba(0, 0, 0, 0.7);

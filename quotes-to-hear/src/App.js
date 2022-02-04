@@ -24,8 +24,13 @@ export function App() {
 }
 
 const Content = styled.div`
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 10% 50px;
-  text-align: center;
+	position: absolute;
+	height: 300px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 0 50px;
+	text-align: center;
 `;
