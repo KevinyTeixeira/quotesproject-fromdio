@@ -1,18 +1,18 @@
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import { string } from 'prop-types'
 
 export const Quote = ({ speak, speaker}) => {
 	return (
-		<>
+		<Wrapper>
 			<SpeakStyled>{ speak} </SpeakStyled>
 			<SpeakerStyled>- { speaker }</SpeakerStyled>
-		</>
+		</Wrapper>
 	)
 }
 
 // Style CSS
 const SpeakStyled = styled.p`
-	font-size: 8vw;
+	font-size: 2em;
 	color: white;
 	margin: 0;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -27,5 +27,18 @@ const SpeakerStyled = styled.p`
 	text-align: right;
 	color: white;
 `
+
+const Wrapper = styled.p`
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`
+
+//TYPE VERIFY
+Quote.propTypes = {
+	SpeakStyled: string,
+	SpeakerStyled: string
+}
 
 export default Quote;

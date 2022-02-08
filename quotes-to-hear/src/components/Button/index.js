@@ -14,11 +14,24 @@ export  const Button = (props) => {
 
 // Style CSS
 const StyledButton = styled.button`
+	background: white;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.2em;
+	padding: 10px 20px;
+	cursor: pointer;
+	box-shadow: #333 3px 3px;
 	margin-bottom: 1rem;
-	border-radius: 25px;
+	transition: 0.5s;
+
+	&:hover {
+		transition: 0.5s;
+		background: black;
+		color: white;
+	}
 `
 
 // Typechecking
-//Button.propTypes = {
+// Button.propTypes = {
 //	onClick: PropTypes.func.isRequired
-//}
+//	}
