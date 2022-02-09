@@ -1,9 +1,4 @@
-import { Button } from './Button'
-import { Image } from './Image'
-import { Quote } from './Quote'
-
-export {
-	Button,
-	Quote,
-	Image
-}
+// This service will consume an API
+export * from './Button'
+export * from './Quote'
+export * from './Image'

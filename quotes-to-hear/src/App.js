@@ -1,23 +1,27 @@
-import React from 'react';
+import {React, useState} from 'react';
 import styled from 'styled-components';
 import { Button, Quote, Image } from './components';
 import { GlobalStyle } from './globalStyle';
+import { getQuote } from './services/quotesService';
 
 export function App() {
 
-	const generateNewQuote = () => {
-		console.log("Generating...")
-	}
+	const [quoteState, setQuoteState] = useState({
+		speak: '"' + "Suba o primeiro degrau com fé. Não é necessário que você veja toda a escada. Apenas dê o primeiro passo." + '"',
+		speaker: "Martin Luther King"
+	});
 
-	const speak = "Suba o primeiro degrau com fé. Não é necessário que você veja toda a escada. Apenas dê o primeiro passo."
-	const speaker = "Martin Luther King";
+	const generateNewQuote = async () => {
+		const quote = await getQuote();
+		setQuoteState(quote);
+	}
 
 	return (
 		<>
 			<GlobalStyle src = { Image } />
 					<Content>
-						<Button onClick = { generateNewQuote }>New Quote</Button>
-						<Quote speak = { speak }  speaker = { speaker }/>
+						<Button onClick = { generateNewQuote }>New Quote!</Button>
+						<Quote speak = { quoteState.speak }  speaker = { quoteState.speaker }/>
 					</Content>
 		</>
 	);

@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# server
+quotes-to-hear/server
+
 # dependencies
 quotes-to-hear/node_modules/
 quotes-to-hear/.pnp
