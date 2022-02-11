@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# server
-quotes-to-hear/server
+# Server
+quotes-to-hear/server/node_modules
+quotes-to-hear/server/src/Models
+quotes-to-hear/server/src/repositories
+quotes-to-hear/server/src/useCases
 
 # dependencies
 quotes-to-hear/node_modules/
