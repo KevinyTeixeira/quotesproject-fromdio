@@ -12,21 +12,24 @@ export const App = () => {
 	const [speak, setSpeak] = useState([null]);
 	const [speaker, setSpeaker] = useState([null]);
 
-	useEffect (() => {
+	const updateQuote = () => {
 		dsv(";", csvUrl).then(data => {	
 			setData(data);
 			const shuffleData = data[Math.floor(data.length * Math.random())];
 			setSpeak(shuffleData.Speak);
 			setSpeaker(shuffleData.Speaker);
-			console.log(shuffleData.Speak);
 		})
+	}
+
+	useEffect (() => {
+		updateQuote();
 	}, [])
 	
 	return (
 		<>
-			<GlobalStyle src = { Image } />
+			<GlobalStyle src = { Image(speaker) } />
 					<Content>
-						<Button onClick = { useEffect }>New Quote!</Button>
+						<Button onClick = { updateQuote }>New Quote!</Button>
 						<Quote speak = { speak }  speaker = { speaker }/>
 					</Content>
 		</>
