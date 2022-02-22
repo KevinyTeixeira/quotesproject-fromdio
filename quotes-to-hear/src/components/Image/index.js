@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-import Speaker from '../../assets/img/mlk.jpg';
 
-export const Image = (Param) => {
-	
-	console.log(Param);
-	return Speaker;
-}
+export const Image = (speakerName) => {
+	console.log(speakerName)
+	if (speakerName === null) {
+		speakerName = "index"
+	}
+	const imagePath = require("../../assets/img/" + "NapoleãoBonaparte" + ".jpg");
+	return imagePath;
+	}
 
 // Style CSS
 const StyledImage = styled.img`

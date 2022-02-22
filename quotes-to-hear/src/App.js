@@ -18,6 +18,7 @@ export const App = () => {
 			const shuffleData = data[Math.floor(data.length * Math.random())];
 			setSpeak(shuffleData.Speak);
 			setSpeaker(shuffleData.Speaker);
+			Image(shuffleData.Speaker);
 		})
 	}
 
@@ -27,7 +28,7 @@ export const App = () => {
 	
 	return (
 		<>
-			<GlobalStyle src = { Image(speaker) } />
+			<GlobalStyle />
 					<Content>
 						<Button onClick = { updateQuote }>New Quote!</Button>
 						<Quote speak = { speak }  speaker = { speaker }/>
