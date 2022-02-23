@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import { Button, Quote, Image } from './components';
+import { Button, Quote } from './components';
 import { GlobalStyle } from './globalStyle';
 import { dsv } from 'd3';
 import styled from 'styled-components';
@@ -11,6 +11,14 @@ export const App = () => {
 	const [data, setData] = useState([null]);
 	const [speak, setSpeak] = useState([null]);
 	const [speaker, setSpeaker] = useState([null]);
+	const [background, setBackground] = useState(require('./assets/img/index.jpg'))
+
+	const updateImage = (Speaker) => {
+		Speaker = Speaker.replace(/ /g, ""); // Remove spaces from speaker
+		const urlPath = "./assets/img/";
+		const urlMount = require((urlPath + Speaker + ".jpg"));
+		setBackground(urlMount);
+	}
 
 	const updateQuote = () => {
 		dsv(";", csvUrl).then(data => {	
@@ -18,7 +26,7 @@ export const App = () => {
 			const shuffleData = data[Math.floor(data.length * Math.random())];
 			setSpeak(shuffleData.Speak);
 			setSpeaker(shuffleData.Speaker);
-			Image(shuffleData.Speaker);
+			updateImage(shuffleData.Speaker);
 		})
 	}
 
@@ -28,7 +36,7 @@ export const App = () => {
 	
 	return (
 		<>
-			<GlobalStyle />
+			<GlobalStyle src = { background } />
 					<Content>
 						<Button onClick = { updateQuote }>New Quote!</Button>
 						<Quote speak = { speak }  speaker = { speaker }/>
