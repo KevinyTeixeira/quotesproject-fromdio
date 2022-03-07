@@ -14,8 +14,13 @@ quotes-to-hear/coverage
 # production
 quotes-to-hear/build
 
+# Server
+quotes-to-hear/.env
+
 # misc
 quotes-to-hear/.DS_Store
+quotes-to-hear/.editorconfig
+quotes-to-hear/.env
 quotes-to-hear/.env.local
 quotes-to-hear/.env.development.local
 quotes-to-hear/.env.test.local
