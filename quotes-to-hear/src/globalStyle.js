@@ -7,5 +7,6 @@ export const GlobalStyle = createGlobalStyle`
 		background: url( ${ props => props.src } ) left no-repeat;
 		background-size: cover;
 		font-family: fantasy;
+		transition: ease 1s, transform 2s;
 	}
 `;

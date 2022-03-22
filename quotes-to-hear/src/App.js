@@ -4,18 +4,20 @@ import { GlobalStyle } from './globalStyle';
 import { dsv } from 'd3';
 import styled from 'styled-components';
 
+// Loading '.env' Variables
 const csvUrl  =  process.env.REACT_APP_CSVDB;
+const imgFolder = process.env.REACT_APP_IMGFOLDER;
 
 export const App = () => {
 
 	const [data, setData] = useState([null]);
 	const [speak, setSpeak] = useState([null]);
 	const [speaker, setSpeaker] = useState([null]);
-	const [background, setBackground] = useState(require('./assets/img/index.jpg'))
+	const [background, setBackground] = useState(require(imgFolder + 'index.jpg'))
 
 	const updateImage = (Speaker) => {
 		Speaker = Speaker.replace(/ /g, ""); // Remove spaces from speaker
-		const urlPath = "./assets/img/";
+		const urlPath = imgFolder;
 		const urlMount = require((urlPath + Speaker + ".jpg"));
 		setBackground(urlMount);
 	}
