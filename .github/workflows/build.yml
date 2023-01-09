@@ -17,7 +17,7 @@ jobs:
         run: |
           npm ci
           npm run build
-      - name: Deploy to gh-pages
+      - name: Deploy to quotes-project
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

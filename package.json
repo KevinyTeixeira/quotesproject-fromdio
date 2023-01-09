@@ -1,6 +1,5 @@
 {
-	"homepage": "http://KevinyTeixeira.github.io/quotesproject-fromdio",
-	"name": "quotes-to-hear",
+	"name": "quotes-project",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
