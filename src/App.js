@@ -10,7 +10,7 @@ const imgFolder = process.env.REACT_APP_IMGFOLDER;
 
 export const App = () => {
 
-	const [setData] = useState([null]);
+	const [data, setData] = useState([null]);
 	const [speak, setSpeak] = useState([null]);
 	const [speaker, setSpeaker] = useState([null]);
 	const [background, setBackground] = useState(require(imgFolder + 'index.jpg'))
