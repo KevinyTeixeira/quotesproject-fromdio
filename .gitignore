@@ -1,31 +1,32 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Server
-quotes-to-hear/server/
+server/
 
 # dependencies
-quotes-to-hear/node_modules/
-quotes-to-hear/.pnp
-quotes-to-hear/.pnp.js
+node_modules/
+.pnp
+.pnp.js
 
 # testing
-quotes-to-hear/coverage
+coverage
 
 # production
-quotes-to-hear/build
+build
 
 # Server
-quotes-to-hear/.env
+.env
 
 # misc
-quotes-to-hear/.DS_Store
-quotes-to-hear/.editorconfig
-quotes-to-hear/.env
-quotes-to-hear/.env.local
-quotes-to-hear/.env.development.local
-quotes-to-hear/.env.test.local
-quotes-to-hear/.env.production.local
+.DS_Store
+.editorconfig
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-quotes-to-hear/npm-debug.log*
-quotes-to-hear/yarn-debug.log*
-quotes-to-hear/yarn-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
